@@ -1,0 +1,19 @@
+//SPDX-License-Identifier: MIT
+pragma solidity 0.8.15;
+
+contract HelloWorld {
+//this is a beginner contract that displays the text hello world.
+string public hello="Hello World";
+//we can choose to edit this message in a function, and save the data in an event
+event NewMessage(string newMsg);
+
+function setMessage(string memory message) public {
+        hello=message;
+
+        emit NewMessage(message);
+
+}
+
+
+
+}
